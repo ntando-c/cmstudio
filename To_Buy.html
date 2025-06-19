@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Domain Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      margin: 0;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .back-home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #fae102;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-home-btn:hover {
+      background: #1e3c4a;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #2c5364;
+      text-align: center;
+    }
+
+    .domain-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .domain-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .domain-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .domain-card h3 {
+      margin-bottom: 0.3rem;
+    }
+
+    .domain-card p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .domain-card button {
+      background: #2c5364;
+      color: white;
+      border: none;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .domain-card button:hover {
+      background: #1e3c4a;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: 3rem auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #2c5364;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    form button:hover {
+      background: #1e3c4a;
+    }
+
+    footer {
+      background: #2c5364;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .socials a {
+      color: #ffcc00;
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <a href="home1.html" class="back-home-btn">&larr; Back to Home</a>
+    <h1>Welcome to Domain Market</h1>
+    <p>Premium domains available to purchase</p>
+  </header>
+
+  <div class="container">
+    <h2>Available Domains</h2>
+    <div class="domain-grid">
+      <div class="domain-card">
+        <h3>afritech.africa</h3>
+        <p>R3,700</p>
+        <button onclick="buyDomain('afritech.africa')">Buy</button>
+      </div>
+      <div class="domain-card">
+        <h3>webnexus.co.za</h3>
+        <p>R2,900</p>
+        <button onclick="buyDomain('webnexus.co.za')">Buy</button>
+      </div>
+      <div class="domain-card">
+        <h3>gozulu.com</h3>
+        <p>R5,000</p>
+        <button onclick="buyDomain('gozulu.com')">Buy</button>
+      </div>
+      <div class="domain-card">
+        <h3>domainrocket.co.za</h3>
+        <p>R3,400</p>
+        <button onclick="buyDomain('domainrocket.co.za')">Buy</button>
+      </div>
+    </div>
+
+    <h2>Request a Domain</h2>
+    <form action="https://formspree.io/f/xeokljaj" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <input type="text" name="domain" placeholder="Domain you're interested in (e.g., afritech.africa)" required />
+      <textarea name="message" rows="4" placeholder="Additional details or questions..."></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="socials">
+      <a href="https://facebook.com/NtandoJNgceshe" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/n.t.a.n.d.o.e" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@n.t.a.n.d.o0" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>&copy; 2025 CMSTUDIOS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const currentUser = localStorage.getItem("loggedInUser");
+    if (!currentUser) {
+      alert("You must log in first.");
+      window.location.href = "index.html";
+    }
+
+    function buyDomain(domain) {
+      alert(`${currentUser}, you have requested to buy: ${domain}. Please complete the form below.`);
+    }
+  </script>
+
+</body>
+</html>
